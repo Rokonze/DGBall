@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGBall</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="icon" type="image/png" href="./assets/DGBALL.png">   
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="menu-container" class="show-menu">
+            <img src="./assets/DGBALL.png" alt="DGBALL Logo" id="logo" width="250px" height="250px">
+            <div id="buttons">
+                <button id="play" >PLAY</button>
+                <button id="controls">CONTROLS</button>
+            </div>
+        </div>
+        
+        <div id="game-container">
+            <div id="scoreboard">
+                <p id="player1Score">0</p>
+                <p id="timer">0</p>
+                <p id="player2Score">0</p>
+            </div>
+            <canvas id="myCanvas"  width="1000" height="600"></canvas>
+            <p id="countdown" class="show-countdown"></p>
+            <button class="return">X</button>
+        </div>
+        
+    </div>
+
+    <div id="modal">
+        <div class="modal-container">
+            <h2 id="goalAnnouncement"></h2>
+        </div>
+        
+    </div>
+
+    <div id="controls-container">
+        <div id="controlsPlayer1">
+            <h2>Player 1</h2>
+            <div class="row1">
+                <p>W</p>
+            </div>
+            <div class="row2">
+                <p>A</p>
+                <p>S</p>
+                <p>D</p>
+            </div>
+            <p class="row3">SPACE</p>
+        </div>
+        <div id="controlsPlayer2">
+            <h2>Player 2</h2>
+            <div class="row1">
+                <p>↑</p>
+            </div>
+            <div class="row2">
+                <p>←</p>
+                <p>↓</p>
+                <p>→</p>
+            </div>
+            <p class="row3">ENTER</p>
+        </div>
+        <button class="return">X</button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,271 @@
+* {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+html {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(239,234,216);
+    background: linear-gradient(125deg, rgba(239,234,216,1) 10%, rgba(208,201,192,1) 92%);
+}
+
+#myCanvas {
+    border: 8px solid #5F7161;
+    display: block;
+    background-color: 	#93C572;
+    margin: auto;
+    
+}
+
+#scoreboard {
+    display: flex;
+    justify-content:space-around ;
+    width: 500px;
+    background-color: #5F7161;
+    
+    border-radius: 30px 30px 0 0;
+}
+
+#scoreboard p {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f7f4eb;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#scoreboard p:first-child {
+    color: #088F8F;
+    width: 25px;
+    text-align: center;
+}
+#scoreboard p:last-child {
+    color: #FFA07A;
+    width: 25px;
+    text-align: center;
+}
+
+#timer {
+    width: 50px;
+    text-align: center;
+}
+
+#menu-container {
+    display: none;
+}
+
+#menu-container.show-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    padding: 60px;
+    
+    
+    
+}
+
+#logo {
+    filter: drop-shadow(2px 4px 8px #fff)
+}
+
+
+
+
+button {
+  background-color: #f7f4eb;
+  border: 2px solid #5F7161;
+  border-radius: 20px;
+  box-shadow: #5F7161 4px 4px 0 0;
+  color: #5F7161;
+  cursor: pointer;
+  display: inline-block;
+  
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+button:active {
+  box-shadow: #5F7161 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.return {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 75px;
+}
+
+
+
+#countdown {
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: #5F7161;
+}
+
+#countdown.show-countdown {
+    display: block;
+}
+
+h1 {
+    margin: 20 auto;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#game-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+#game-container.show-game {
+    display: flex;
+}
+
+
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-container {
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-container h2 {
+    font-size: 2em;
+}
+
+#modal.show-modal {
+    display: block;
+}
+
+#controls-container {
+    display: none;
+    
+}
+
+#controls-container.show-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color: #5F7161;
+    text-align: center;
+    
+}
+
+
+
+#controls-container p {
+    padding: 10px;
+    border: 2px solid #5F7161;
+    border-radius: 10px;
+    box-shadow: #5F7161 4px 4px 0 0;
+}
+
+.row3 {
+    width: auto;
+    height: auto;
+}
+
+#controlsPlayer1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #5F7161;
+    border-radius: 30px;
+    padding: 50px;
+    margin-right: 150px;
+    background-color: #f7f4eb;
+    box-shadow: #5F7161 6px 6px 0 0;
+}
+
+#controlsPlayer1 h2 {
+    color: #088F8F;
+    text-decoration: underline #5F7161;
+}
+
+#controlsPlayer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #5F7161;
+    border-radius: 30px;
+    padding: 50px;
+    background-color: #f7f4eb;
+    box-shadow: #5F7161 6px 6px 0 0;
+}
+
+#controlsPlayer2 h2 {
+    color: #FFA07A;
+    text-decoration: underline #5F7161;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.row2 p {
+    margin: 10px 10px;
+}
