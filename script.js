@@ -612,11 +612,11 @@ function checkGoal() {
         
     // } 
     if(!Ball1.isInGoal) {
-    if((Ball1.pos.compare(leftGoal.topCorner)) && (leftGoal.bottomCorner.compare(Ball1.pos))) {
+    if((Ball1.pos.compare(leftGoal.topCorner)) && (leftGoal.bottomCorner.compare(Ball1.pos)) && timer.textContent > 0) {
         Ball1.isInGoal = true;
         player2Score.textContent = parseInt(player2Score.textContent) + 1;
         goalRes(Player2);
-    } else if((Ball1.pos.compare(rightGoal.topCorner)) && (rightGoal.bottomCorner.compare(Ball1.pos))) {
+    } else if((Ball1.pos.compare(rightGoal.topCorner)) && (rightGoal.bottomCorner.compare(Ball1.pos)) && timer.textContent > 0) {
         Ball1.isInGoal = true;
         player1Score.textContent = parseInt(player1Score.textContent) + 1;
         goalRes(Player1);
