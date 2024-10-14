@@ -35,16 +35,17 @@ function handlePlay () {
     startCounter();
     startTimer();
     
-    
-    setTimeout(() => {
-        
-    }, 3000);
 }
+
+let startInterval;
+let timeInterval;
+let endTimeout;
+let goalTimeout;
 
 function startCounter () {
     let counter = 3;
     countDown.textContent = counter;
-    const startInterval = setInterval(() => {
+     startInterval = setInterval(() => {
         counter--;
         countDown.textContent = counter;
         if(counter === 0) {
@@ -62,7 +63,7 @@ function startCounter () {
 
 function startTimer () {
     
-    const timeInterval = setInterval(() => {
+     timeInterval = setInterval(() => {
         if(!timerPaused) {
             timer.textContent = parseInt(timer.textContent) - 1;
         }
@@ -79,7 +80,7 @@ function startTimer () {
                 goalAnnouncement.textContent = "It's a draw!";
                 goalAnnouncement.style.color = "#5F7161";
             }
-            setTimeout(() => {
+            endTimeout = setTimeout(() => {
                 modal.classList.remove('show-modal');
                 gameContainer.classList.remove('show-game');
                 menu.classList.add('show-menu');
@@ -126,10 +127,16 @@ function resetGoal (ball_x = 500, ball_y = 300) {
 function handleXPlay () {
     gameContainer.classList.remove('show-game');
     menu.classList.add('show-menu');
+    clearInterval(startInterval);
+    clearInterval(timeInterval);
+    clearTimeout(endTimeout);
+    clearTimeout(goalTimeout);
+    resetGoal();
     player1Score.textContent = 0;
     player2Score.textContent = 0;
     timer.textContent = 90;
-    resetGoal();
+    goalAnnouncement.textContent = "";
+    
 }
 
 function handleControls () {
@@ -627,7 +634,7 @@ function goalRes (player) {
         goalAnnouncement.style.color = "#088F8F";
     }
     timerPaused = true;
-    const goalTimeout = setTimeout(() => {
+    goalTimeout = setTimeout(() => {
         if(player === Player2) {
             resetGoal(250, 300);
         } else if(player === Player1) {
